@@ -12,6 +12,8 @@ class Translator:
         return GoogleTranslator(source=source, target=lang).translate(msg)
 
 def main(args: String[]):
+    if not args[0].contains('.txt'):
+        print(f'FileError: file {args[0]} not text file')
     try:
         touch(args[2])
     except:
